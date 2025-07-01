@@ -6,6 +6,12 @@ CREATE TABLE Customers (
   City VARCHAR(50)
 );
 
+INSERT INTO Customers VALUES
+(1, 'sonu', 'united kingdom'),
+(2, 'labhu', 'united states'),
+(3, 'mihir', 'canada'),
+(4, 'tushar', 'india');
+
 CREATE TABLE Orders (
   OrderID INT PRIMARY KEY,
   CustomerID INT,
@@ -13,12 +19,6 @@ CREATE TABLE Orders (
   Amount DECIMAL(10,2),
   FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
 );
-
-INSERT INTO Customers VALUES
-(1, 'sonu', 'united kingdom'),
-(2, 'labhu', 'united states'),
-(3, 'mihir', 'canada'),
-(4, 'tushar', 'india');
 
 INSERT INTO Orders VALUES
 (100, 1, '2025-06-10', 250.00),
